@@ -36,6 +36,7 @@ if(isset($_POST['name'])){
 
  ?> 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,22 +47,33 @@ if(isset($_POST['name'])){
     <title>Form</title>
 </head>
 <body>
-    <img class='h-full w-full fixed z-0' src='https://images.unsplash.com/photo-1531259736756-6caccf485f81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHVuaXZlcnNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60' >
-    <div class=' h-full w-full  m-2 p-4 fixed z-10 flex flex-col justify-center items-center'>
-        <h1 class="text-3xl">hiiii</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        <form class="flex flex-col w-2/3" action="index.php " method="post" >
-            <label name='name'>name</label><input class="border p-2 border-gray-500" type="text" name="name" id="name" placeholder="enter name">
-            <input  class="border p-2 border-gray-500" type="email" name="email" id="email" placeholder="enter email">
-            <input class="border p-2 border-gray-500" type="number" name="age" id="age" placeholder="enter age">
-            <input class="border p-2 border-gray-500" type="text" name="gender" id="gender" placeholder="enter gender">
-            <input class="border p-2 border-gray-500" type="number" name="phone" id="phone" placeholder="enter phone">
-            <textarea class="border p-2 border-gray-500" name="other" cols="20" id="other" rows="6" placeholder="enter somthing"></textarea>
-            <button class="bg-gray-500 p-1">submit</button>
+    <img class='opacity- h-full w-full fixed z-0' src='photo1.jpg' >
+    <div class=' h-full w-full top-1  m-2 p-9 pb-4 absolute z-10 flex flex-col justify-center items-center'>
+        <h1 class="text-3xl font-sans font-bold text-orange-500">LPU Travel Guide</h1>
+        <p class=' text-green-500 text-sm'>We are going to Kashmir in this diwali(last date:09-2023)</p>
+        <form class="flex pb-3 flex-col p-6 w-2/3 bg-slate-400/10 top-0" action="index.php " method="post" >
+            <label class="text-orange-400" name='name'>Name</label>
+            <input class="rounded-3xl border p-1 m-1 border-gray-500" type="text" name="name" id="name" placeholder="enter name">
+            <label class="text-orange-400" name='email'>Email</label>
+            <input  class="rounded-3xl border p-1 m-1 border-gray-500" type="email" name="email" id="email" placeholder="enter email">
+            <label class="text-orange-400" name='age'>Age</label>
+            <input class="rounded-3xl border p-1 m-1 border-gray-500" type="number" name="age" id="age" placeholder="enter age">
+            <label class="text-orange-400" name='gender'>Gender</label>
+            <input  class="rounded-3xl border p-1 m-1 border-gray-500" type="text" name="gender" id="gender" placeholder="enter gender">
+            <label class="text-orange-400" name='phone'>Phone no.</label>
+            <input class="rounded-3xl border p-1 m-1 border-gray-500" type="number" name="phone" id="phone" placeholder="enter phone">
+            <label class="text-orange-400" name='other'>Any Query</label>
+            <textarea class="border p-1 m-1 rounded-md border-gray-500" name="other" cols="20" id="other" rows="6" placeholder="enter somthing"></textarea>
+            <div class="flex"><button  onclick='abc()' class="bg-orange-500 border border-orange-800 p-1  w-1/3 rounded-md">submit</button>
+            <p id="p1" class="text-green-500"></p></div>
         
         </form>
     </div>
-    
+    <script>
+        function abc(){
+            alert('you succesfully regestered')
+            document.getElementById('p1').innerHTML='Thanks for registration'
+        }
+    </script>
 </body>
 </html>
-
